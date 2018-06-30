@@ -28,4 +28,4 @@ deploy:
   on:
     tags: true
     all_branches: true
-    python: 3.7
+    python: "3.7-dev"
