@@ -7,8 +7,6 @@ install:
   - pip install -U pip
   - pip install -U wheel
   - pip install -U tox
-
-  - pip install -r requirements.txt
 script:
   - export TOXENV=py`python -c 'import sys; print("".join(map(str, sys.version_info[:2])))'`
   - echo "$TOXENV"
@@ -25,7 +23,7 @@ deploy:
   provider: pypi
   user: hellysmile
   password:
-    secure: ""
+    secure: "CVGZL37KwMtGOdYETQZIW1VumI71dS6z8k6aDho9lSjXgv4i8g95UyY9f8cUCDxGPEnQS+pxIj3Rce0lDsmcNxGFWaGCi0DUqlRy5XiJk7LSJvcvs3NcIaZZfxunweD3hTnwrHus+pxBkDxk6Lr8v5eatO5PxdK/YgHB4txS0xRDHr2CMB2mrIeWb2lRbOOWJZ56mZQDyrplpyHWwquNUOzPmRGd96VVi9rLJKEMzSJzXthpwgzzNSddUx5GkoOcEHlLOHvOb9fDflOmuZMxMFLyNabFk6sqzwWfQPtV6zlegBRyy447DyaTvE/gbSb/GMGPNaDZmkPDa8fGYKVEr1nw0pZFDPoiw93cbmeFTo9eP0orpm0xkks4DfMHcdUxtNRfv7c7pVTh4qWw8g3LZrzvLptLhzJnAyyslfJxRaYG3lxQCrAVBCQouWLo8ar/cLesTfBtyhZcnNX1bShpanr2e3fMANwOVa6QAc991aolr4KNr67cx7K7ZpT32S23m3vn5wXEIkXiEiwmSsqJyNqfJbMbHAbbOImpF881Qb4DwYVjVvRaYVCLf5GZpj0w5iyYKRYNuBYmqP0v7NyoYaf7RnBPbEtSmJv/5UZEGpfD/73xSrT7rhsYIur0dtzfm5C6hp4zwUT7tUecC6xjQpmXvVsFGL6vfeeWgG3NkaE="
   distributions: "sdist"
   on:
     tags: true
