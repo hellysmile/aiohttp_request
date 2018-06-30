@@ -17,7 +17,7 @@ class ThreadContext:
     def __init__(self, fn: typing.Callable) -> None:
         self._fn = fn
 
-        self._ctx = contextvars.copy_context()
+        self._ctx = contextvars.copy_context()  # type: contextvars.Context
 
     def __call__(self, *args, **kwargs):
         return self._ctx.run(partial(self._fn, *args, **kwargs))
