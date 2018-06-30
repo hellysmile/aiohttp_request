@@ -1,0 +1,28 @@
+dist: trusty
+language: python
+python:
+  - "3.7"
+install:
+  - pip install -r requirements.txt
+script:
+  - export TOXENV=py`python -c 'import sys; print("".join(map(str, sys.version_info[:2])))'`
+  - echo "$TOXENV"
+
+  - tox
+after_success:
+  - pip install codecov
+  - codecov
+cache: pip
+notifications:
+  email: false
+
+deploy:
+  provider: pypi
+  user: hellysmile
+  password:
+    secure: ""
+  distributions: "sdist"
+  on:
+    tags: true
+    all_branches: true
+    python: 3.7
