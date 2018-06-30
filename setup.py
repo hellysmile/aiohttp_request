@@ -35,6 +35,7 @@ setup(
         'aiohttp>=3.3.0',
         'werkzeug>=0.6.1'
     ],
+    python_requires='>=3.7.0',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
