@@ -3,6 +3,11 @@ language: python
 python:
   - "3.7-dev"
 install:
+  - pip install -U setuptools
+  - pip install -U pip
+  - pip install -U wheel
+  - pip install -U tox
+
   - pip install -r requirements.txt
 script:
   - export TOXENV=py`python -c 'import sys; print("".join(map(str, sys.version_info[:2])))'`
