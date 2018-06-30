@@ -1,11 +1,8 @@
 import io
 import os
 import re
-import sys
 
 from setuptools import setup
-
-needs_pytest = 'pytest' in set(sys.argv)
 
 
 def get_version():
