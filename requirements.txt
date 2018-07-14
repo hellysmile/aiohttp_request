@@ -3,7 +3,7 @@ aiohttp==3.3.2
 docutils==0.14
 flake8==3.5.0
 isort==4.3.4
-mypy==0.610
+mypy==0.620
 pytest-asyncio==0.8.0
 pytest-cov==2.5.1
 pytest-mypy==0.3.2
