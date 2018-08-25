@@ -1,5 +1,5 @@
 Pygments==2.2.0
-aiohttp==3.3.2
+aiohttp==3.4.0
 docutils==0.14
 flake8==3.5.0
 isort==4.3.4
