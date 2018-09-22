@@ -12,6 +12,7 @@ def thread():
 async def hello(request):
     request['sense'] = 42
 
+    loop = asyncio.get_event_loop()
     await loop.run_in_executor(None, thread)
 
     return web.Response(text="Hello, world")

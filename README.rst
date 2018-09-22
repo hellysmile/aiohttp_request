@@ -84,6 +84,7 @@ aiohttp-request works nicely with threads via `contextvars_executor <https://git
     async def hello(request):
         request['sense'] = 42
 
+        loop = asyncio.get_event_loop()
         await loop.run_in_executor(None, thread)
 
         return web.Response(text="Hello, world")
